@@ -1,0 +1,16 @@
+<h1>Highscores</h1>
+<table>
+<% @scores.each do |score| %>
+  <tr>
+  <td>
+  <h2><%= link_to score.nickname, score %></h2>
+  <% if ENV['RUNLEVEL'] == "DEBUG" %>
+  <p><%= link_to "Edit", edit_score_path(score) %> | <%= link_to "Delete", score, :confirm => "Are you sure?", :method => :delete %></p>
+  <% end %>
+  </td>
+  <td><%= score.score %></td>
+  
+  </tr>
+<% end %>
+</table>
+<p><%= link_to "New Game", games_path %></p>

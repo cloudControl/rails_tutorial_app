@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+@font-face {
+	    font-family: 'BDCartoonShoutRegular';
+        src: url('/assets/BD_Cartoon_Shout-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+      }
+html {font: 62.5%/20pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;}
+        	body {
+            background: url('/assets/noise-grey.gif') repeat scroll 0 0 #313233;
+            color: #fff;
+            font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+            font-size: 12px;
+            font-size: 1.2rem;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            width: 100%;
+          }
+a, a:visited, a:active {color: #00aeef}
+          #content{
+            background: url('/assets/logo.png') no-repeat center top;
+            display: inline-block;
+            margin: 1% auto 0px auto;
+            padding: 100px 0px 0px 0px;
+            
+            /*width: 500px;*/
+          }
+#pacman {
+        height:450px;
+        width:342px;
+        margin:20px auto;
+      }
+#shim { 
+        font-family: BDCartoonShoutRegular; 
+        position:absolute;
+        visibility:hidden
+      }
+td{width: 200px; text-align: center;}
+form {text-align: center; width:100%;}
+input {font-size: 16px; font-size: 1.6rem;}
+h1 {font-size: 40px; font-size: 4rem;}
+p {font-size: 16px; font-size: 1.6rem;}
+a { text-decoration:none; }

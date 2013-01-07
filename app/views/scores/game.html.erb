@@ -1,0 +1,22 @@
+  <h2>( cloudControl Pacman-as-a-Service )</h2>
+
+
+  <div id="pacman"></div>
+  <%= stylesheet_link_tag    "pacman", :media => "all" %>
+  <%= stylesheet_link_tag    "modernizr-1.5.min", :media => "all" %>
+  <script>
+
+    var el = document.getElementById("pacman");
+
+    if (Modernizr.canvas && Modernizr.localstorage && 
+        Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+      window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+    } else { 
+      el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+nn    }
+
+  </script><br/>
+    HTML5-Pacman developed by <a href="http://arandomurl.com/">Writeup</a> | <a href="http://arandomurl.com/2010/07/25/html5-pacman.html">Project page</a> |
+  Code on <a href="https://github.com/daleharvey/pacman">Github</a><br />
+  PHP highscore back-end quickly developed by <a href="http://www.cloudcontrol.com">cloudControl</a>.
