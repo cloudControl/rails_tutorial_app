@@ -3,24 +3,41 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
+# development:
+#   adapter: sqlite3
+#   database: db/development.sqlite3
+#   pool: 5
+#   timeout: 5000
+
+# test:
+#   adapter: sqlite3
+#   database: db/test.sqlite3
+#   pool: 5
+#   timeout: 5000
+
+# production:
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: 2
+#   database: <%= "'#{ ENV['MYSQLS_DATABASE'] }'" %>
+#   host: <%= "'#{ ENV['MYSQLS_HOSTNAME'] }'" %>
+#   port: <%= ENV["MYSQLS_PORT"] %>
+#   username: <%= "'#{ ENV['MYSQLS_USERNAME'] }'" %>
+#   password: <%= "'#{ ENV['MYSQLS_PASSWORD'] }'" %>
+
+common: &common
+  adapter: postgresql
+  username: 
+  password: 
+
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
-  pool: 5
-  timeout: 5000
+  <<: *common
+  database: 
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
-  pool: 5
-  timeout: 5000
+  <<: *common
+  database: 
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  pool: 2
-  database: <%= "'#{ ENV['MYSQLS_DATABASE'] }'" %>
-  host: <%= "'#{ ENV['MYSQLS_HOSTNAME'] }'" %>
-  port: <%= ENV["MYSQLS_PORT"] %>
-  username: <%= "'#{ ENV['MYSQLS_USERNAME'] }'" %>
-  password: <%= "'#{ ENV['MYSQLS_PASSWORD'] }'" %>
+  <<: *common
+  database: 
