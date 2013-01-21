@@ -47,7 +47,6 @@ development:
   encoding: utf8
   pool: 5
   host:
-  port:
   username: 
   password: 
   database: 
@@ -57,7 +56,6 @@ test:
   encoding: utf8
   pool: 5
   host:
-  port:
   username: 
   password: 
   database: 
@@ -67,7 +65,6 @@ production:
   encoding: utf8
   pool: 5
   host:
-  port:
   username: 
   password: 
   database: 
