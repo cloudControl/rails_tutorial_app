@@ -44,18 +44,30 @@
 
 development:
   adapter: postgresql
+  encoding: utf8
+  pool: 5
+  host:
+  port:
   username: 
   password: 
   database: 
 
 test:
   adapter: postgresql
+  encoding: utf8
+  pool: 5
+  host:
+  port:
   username: 
   password: 
   database: 
 
 production:
   adapter: postgresql
+  encoding: utf8
+  pool: 5
+  host:
+  port:
   username: 
   password: 
   database: 
