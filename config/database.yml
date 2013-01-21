@@ -25,24 +25,7 @@
 #   username: <%= "'#{ ENV['MYSQLS_USERNAME'] }'" %>
 #   password: <%= "'#{ ENV['MYSQLS_PASSWORD'] }'" %>
 
-# common: &common
-#   adapter: postgresql
-#   username: 
-#   password: 
-
-# development:
-#   <<: *common
-#   database: 
-
-# test:
-#   <<: *common
-#   database: 
-
-# production:
-#   <<: *common
-#   database: 
-
-development:
+common: &common
   adapter: postgresql
   encoding: utf8
   pool: 5
@@ -50,24 +33,45 @@ development:
   port:
   username: 
   password: 
+
+development:
+  <<: *common
   database: 
 
 test:
-  adapter: postgresql
-  encoding: utf8
-  pool: 5
-  host:
-  port:
-  username: 
-  password: 
+  <<: *common
   database: 
 
 production:
-  adapter: postgresql
-  encoding: utf8
-  pool: 5
-  host:
-  port:
-  username: 
-  password: 
+  <<: *common
   database: 
+
+# development:
+#   adapter: postgresql
+#   encoding: utf8
+#   pool: 5
+#   host:
+#   port:
+#   username: 
+#   password: 
+#   database: 
+
+# test:
+#   adapter: postgresql
+#   encoding: utf8
+#   pool: 5
+#   host:
+#   port:
+#   username: 
+#   password: 
+#   database: 
+
+# production:
+#   adapter: postgresql
+#   encoding: utf8
+#   pool: 5
+#   host:
+#   port:
+#   username: 
+#   password: 
+#   database: 
