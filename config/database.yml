@@ -25,19 +25,37 @@
 #   username: <%= "'#{ ENV['MYSQLS_USERNAME'] }'" %>
 #   password: <%= "'#{ ENV['MYSQLS_PASSWORD'] }'" %>
 
-common: &common
+# common: &common
+#   adapter: postgresql
+#   username: 
+#   password: 
+
+# development:
+#   <<: *common
+#   database: 
+
+# test:
+#   <<: *common
+#   database: 
+
+# production:
+#   <<: *common
+#   database: 
+
+development:
   adapter: postgresql
   username: 
   password: 
-
-development:
-  <<: *common
   database: 
 
 test:
-  <<: *common
+  adapter: postgresql
+  username: 
+  password: 
   database: 
 
 production:
-  <<: *common
+  adapter: postgresql
+  username: 
+  password: 
   database: 
